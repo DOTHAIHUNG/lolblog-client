@@ -1,14 +1,9 @@
-/*--
-Author: W3layouts
-Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
---*/
 html, body {
   font-size: 100%;
   font-family: 'Open Sans', sans-serif;
   background: #ffffff;
   margin: 0;
+  padding: 0;
 }
 
 p, ul li, ol li {
@@ -39,62 +34,6 @@ input[type="submit"], input[type="reset"], .w3ls_footer_grid_leftl, .w3ls_footer
   -o-transition: .5s ease-in;
   -ms-transition: .5s ease-in;
 }
-
-/*-- header --*/
-.w3layouts_header_left {
-  float: left;
-}
-
-.w3layouts_header_left p {
-  color: #999;
-  line-height: 1.8em;
-  float: left;
-  margin: 5px 42px 0 0;
-}
-
-.w3layouts_header_left a {
-  color: #999;
-}
-
-.w3layouts_header_right {
-  float: right;
-  position: relative;
-  width: 23%;
-}
-
-.header {
-  padding: 0.6em 3em;
-  background: #1d1d1d;
-}
-
-.w3layouts_header_right input[type="search"] {
-  width: 65%;
-  border-top-left-radius: 20px;
-  border-bottom-left-radius: 20px;
-  outline: none;
-  border: none;
-  background: #fff;
-  color: #999;
-  padding: 8px 15px 8px 15px;
-  font-size: 13px;
-  float: left;
-}
-
-.w3layouts_header_right input[type="submit"] {
-  outline: none;
-  border: none;
-  background: #ff5000 url(assets/images/search.png) no-repeat 12px 5px;
-  color: #fff;
-  padding: 6px 0;
-  width: 17%;
-  border-top-right-radius: 20px;
-  border-bottom-right-radius: 20px;
-  -webkit-transition: all 0.2s ease 0s;
-  -moz-transition: all 0.2s ease 0s;
-  -o-transition: all 0.2s ease 0s;
-  -ms-transition: all 0.2s ease 0s;
-}
-
 /*-- nav --*/
 .navbar-default {
   background: none;
@@ -2169,6 +2108,13 @@ ul#lightGallery {
   }
 
   #mail {
-    padding: 0em 0 2em 0;
+    padding: 0 0 2em 0;
   }
+}
+
+/*login*/
+.login {
+  background: url("assets/images/1.jpg") no-repeat;
+  background-size: cover;
+  height: 100vh;
 }
