@@ -1,3 +1,5 @@
+@import "https://use.fontawesome.com/releases/v5.7.2/css/all.css";
+
 .login-box {
   width: 280px;
   position: absolute;
@@ -21,8 +23,18 @@
   font-size: 20px;
   padding: 8px 0;
   margin: 8px 0;
+  border-bottom: 1px solid #4caf50;
 }
 
 .btn-submit {
   color: #0d0d0d;
+}
+
+.textbox i {
+  position: relative;
+  top: 0.5em;
+}
+
+.textbox input {
+
 }
