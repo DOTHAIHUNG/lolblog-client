@@ -3,15 +3,15 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { NavbarComponent } from './component/navbar/navbar.component';
-import { BannerComponent } from './component/banner/banner.component';
-import { ModalComponent } from './component/modal/modal.component';
-import { AboutComponent } from './component/about/about.component';
-import { ServiceComponent } from './component/service/service.component';
-import { GalleryComponent } from './component/gallery/gallery.component';
-import { ProjectComponent } from './component/project/project.component';
-import { ContactComponent } from './component/contact/contact.component';
-import { FooterComponent } from './component/footer/footer.component';
+import { NavbarComponent } from './component/homepage/navbar/navbar.component';
+import { BannerComponent } from './component/homepage/banner/banner.component';
+import { ModalComponent } from './component/homepage/modal/modal.component';
+import { AboutComponent } from './component/homepage/about/about.component';
+import { ServiceComponent } from './component/homepage/service/service.component';
+import { GalleryComponent } from './component/homepage/gallery/gallery.component';
+import { ProjectComponent } from './component/homepage/project/project.component';
+import { ContactComponent } from './component/homepage/contact/contact.component';
+import { FooterComponent } from './component/homepage/footer/footer.component';
 import { LoginComponent } from './component/login/login.component';
 import { HomepageComponent } from './component/homepage/homepage.component';
 
