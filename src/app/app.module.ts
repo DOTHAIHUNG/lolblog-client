@@ -1,4 +1,3 @@
-import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
 
 import {AppRoutingModule} from './app-routing.module';
@@ -14,7 +13,10 @@ import {ContactComponent} from './component/homepage/contact/contact.component';
 import {FooterComponent} from './component/homepage/footer/footer.component';
 import {LoginComponent} from './component/login/login.component';
 import {HomepageComponent} from './component/homepage/homepage.component';
-import { RegisterComponent } from './component/register/register.component';
+import {RegisterComponent} from './component/register/register.component';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -33,8 +35,11 @@ import { RegisterComponent } from './component/register/register.component';
     RegisterComponent
   ],
   imports: [
-    BrowserModule,
-    AppRoutingModule
+    BrowserAnimationsModule,
+    AppRoutingModule,
+    ReactiveFormsModule,
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
