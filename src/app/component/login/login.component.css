@@ -50,3 +50,12 @@
   border: 2px solid #556aaf;
   transition: border-width 0.6s linear;
 }
+
+a {
+  text-align: center;
+  color: #fff;
+}
+
+a:hover {
+  color: #4caf50;
+}
