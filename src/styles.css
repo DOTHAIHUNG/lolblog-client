@@ -2118,3 +2118,9 @@ ul#lightGallery {
   background-size: cover;
   height: 100vh;
 }
+
+.register {
+  background: url("assets/images/register.jpg") no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
