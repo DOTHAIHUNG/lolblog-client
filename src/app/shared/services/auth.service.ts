@@ -14,8 +14,7 @@ const httpOptions = {
 export class AuthService {
   private signupUrl = 'http://localhost:8080/signup';
 
-  constructor(private http: HttpClient,
-              public jwtHelper: JwtHelperService) {
+  constructor(private http: HttpClient) {
   }
 
   signUp(info: SignUpInfo): Observable<string> {

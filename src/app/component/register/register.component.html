@@ -1,22 +1,48 @@
-<div class="register">
-  <form class="register-box">
-    <h1>Register</h1>
-    <div class="textbox row">
-      <i class="fas fa-headset col-md-2"></i>
-      <input type="text" placeholder="Name" class="col-md-10">
-    </div>
-    <div class="textbox row">
-      <i class="fas fa-user col-md-2"></i>
-      <input type="text" placeholder="Username" class="col-md-10">
-    </div>
-    <div class="textbox row">
-      <i class="fas fa-envelope col-md-2"></i>
-      <input type="email" placeholder="Email" class="col-md-10">
-    </div>
-    <div class="textbox row">
-      <i class="fas fa-lock col-md-2"></i>
-      <input type="password" placeholder="Password" class="col-md-10">
-    </div>
-    <input type="submit" value="Sign up" class="btn-submit col-md-12">
-  </form>
-</div>
+<div *ngIf="isSignedUp; else signupForm"></div>
+<ng-template #signupForm>
+  <div class="register">
+    <form class="register-box" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate>
+      <h1>Register</h1>
+      <div class="textbox row">
+        <i class="fas fa-headset col-md-2"></i>
+        <input type="text" placeholder="Name" class="col-md-10" name="name" [(ngModel)]="form.name" #name="ngModel"
+               required/>
+        <div *ngIf="f.submitted && name.invalid">
+          <div *ngIf="name.errors.required">Name is required</div>
+        </div>
+      </div>
+      <div class="textbox row">
+        <i class="fas fa-user col-md-2"></i>
+        <input type="text" placeholder="Username" class="col-md-10" name="username" [(ngModel)]="form.username"
+               #username="ngModel"
+               required/>
+        <div *ngIf="f.submitted && username.invalid">
+          <div *ngIf="username.errors.required">Username is required</div>
+        </div>
+      </div>
+      <div class="textbox row">
+        <i class="fas fa-envelope col-md-2"></i>
+        <input type="email" placeholder="Email" class="col-md-10" name="email" [(ngModel)]="form.email" #email="ngModel"
+               required email/>
+        <div *ngIf="f.submitted && email.invalid">
+          <div *ngIf="email.errors.required">Email is required</div>
+          <div *ngIf="email.errors.email">Email must be a valid email address</div>
+        </div>
+      </div>
+      <div class="textbox row">
+        <i class="fas fa-lock col-md-2"></i>
+        <input type="password" placeholder="Password" class="col-md-10" name="password" [(ngModel)]="form.password"
+               #password="ngModel"
+               required minlength="6"/>
+        <div *ngIf="f.submitted && password.invalid">
+          <div *ngIf="password.errors.required">Password is required</div>
+          <div *ngIf="password.errors.minlength">Password must be at least 6 characters</div>
+        </div>
+      </div>
+      <input type="submit" value="Sign up" class="btn-submit col-md-12">
+      <div *ngIf="f.submitted && isSignUpFailed" class="alert alert-warning">
+        Signup failed!<br/>{{errorMessage}}
+      </div>
+    </form>
+  </div>
+</ng-template>

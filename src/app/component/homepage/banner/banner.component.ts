@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+declare function lightGallery(): any;
 @Component({
   selector: 'app-banner',
   templateUrl: './banner.component.html',
@@ -7,7 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BannerComponent implements OnInit {
 
-  constructor() { }
+  constructor() {
+    lightGallery()
+  }
 
   ngOnInit() {
   }

@@ -36,7 +36,7 @@ export class RegisterComponent implements OnInit {
         console.log(data);
         this.isSignedUp = true;
         this.isSignUpFailed = false;
-        this.router.navigate(['/']);
+        this.router.navigate(['/login']);
       },
       error => {
         console.log(error);
